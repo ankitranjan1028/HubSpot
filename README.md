@@ -3,7 +3,8 @@
 A full-stack project that integrates with HubSpot CRM to display and filter contacts based on their roles and location, using an interactive map and a custom property field.
 
 
-🛠️ Project Setup & Features Overview
+🛠️ Project Setup & Features Overview </br>
+
 ✅ Step 1: Set Up HubSpot Developer Environment
 Create a HubSpot Developer Account
 
