@@ -1,0 +1,19 @@
+# node modules
+node_modules/
+
+# environment variables
+.env
+.env.local
+
+# log files
+logs/
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# process ids
+pids/
+*.pid
+*.seed
