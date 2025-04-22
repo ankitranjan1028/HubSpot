@@ -117,3 +117,124 @@ body {
   background-color: #6366f1;
   color: white;
 }
+
+
+
+
+
+/* Mobile layout adjustments */
+@media (max-width: 768px) {
+  /* Overall layout */
+  .flex-col.md\:flex-row {
+    flex-direction: column !important;
+  }
+  
+  /* Header improvements */
+  header h1 {
+    font-size: 1.25rem;
+  }
+  
+  /* Filter panel */
+  .filter-panel {
+    width: 100% !important;
+    max-height: none;
+    border-right: none !important;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 0.75rem !important;
+  }
+  
+  /* Collapsible filter panel */
+  .filter-panel.collapsed {
+    max-height: 60px;
+    overflow: hidden;
+  }
+  
+  .filter-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0.5rem 0;
+    cursor: pointer;
+  }
+  
+  .filter-toggle-icon {
+    transition: transform 0.2s;
+  }
+  
+  .filter-toggle-icon.open {
+    transform: rotate(180deg);
+  }
+  
+  /* Filter options layout */
+  .filter-content {
+    margin-top: 0.5rem;
+  }
+  
+  /* Button group layout */
+  .filter-buttons {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  
+  /* Map container */
+  .map-container {
+    height: 100% !important;
+    width: 100% !important;
+  }
+  
+  /* Popup styling */
+  .leaflet-popup-content {
+    max-width: 200px;
+    font-size: 0.875rem;
+  }
+  
+  /* Role pills */
+  .role-pill {
+    padding: 0.15rem 0.4rem;
+    font-size: 0.7rem;
+    margin-right: 0.2rem;
+    margin-bottom: 0.2rem;
+  }
+  
+  /* List view */
+  .grid.grid-cols-1.md\:grid-cols-2.lg\:grid-cols-3 {
+    grid-template-columns: 1fr !important;
+  }
+  
+  /* Legend positioning */
+  .info.legend {
+    max-width: 140px;
+    font-size: 0.75rem;
+  }
+  
+  .info.legend svg {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .leaflet-popup {
+    margin-bottom: 20px;
+  }
+  
+  .contact-popup .leaflet-popup-content {
+    margin: 8px;
+    width: auto !important;
+    max-width: 220px;
+  }
+  
+  /* Ensure popups appear above markers */
+  .leaflet-popup-tip-container {
+    left: 50%;
+    margin-left: -10px;
+  }
+  
+  /* Fix popup panning issues */
+  .leaflet-fade-anim .leaflet-popup {
+    transition: none;
+  }
+}
