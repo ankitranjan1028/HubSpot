@@ -102,7 +102,7 @@ const MapView = ({ contacts }) => {
     return (
       <div className="flex items-center justify-center h-full">
         <div className="error-notification">
-          Failed to load contacts
+        No contacts found for entered location!
         </div>
       </div>
     );

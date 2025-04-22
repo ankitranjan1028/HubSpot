@@ -19,13 +19,13 @@ const ContactDirectory = () => {
           <h1 className="text-2xl font-bold text-gray-700">ProStruct Engineering Contact Directory</h1>
           <div className="flex space-x-2">
             <button 
-              className={`px-4 py-2 rounded ${viewMode === 'map' ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}
+              className={`px-4 py-2 rounded cursor-pointer ${viewMode === 'map' ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}
               onClick={() => setViewMode('map')}
             >
               Map View
             </button>
             <button 
-              className={`px-4 py-2 rounded ${viewMode === 'list' ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}
+              className={`px-4 py-2 rounded cursor-pointer ${viewMode === 'list' ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}
               onClick={() => setViewMode('list')}
             >
               List View
