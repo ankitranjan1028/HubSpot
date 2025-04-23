@@ -20,7 +20,7 @@ const useContacts = () => {
         setFilteredContacts(data);
         setLoading(false);
       } catch (err) {
-        setError('No contacts found for entered location!');
+        setError('Something went wrong!');
         setLoading(false);
       }
     };
