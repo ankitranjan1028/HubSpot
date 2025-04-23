@@ -13,11 +13,27 @@ const app = express();
 
 // Middleware
 // app.use(cors());
+// const corsOptions = {
+//   origin: [
+//     'http://localhost:5173', // for development
+//     'https://hubspot-frontend.onrender.com' // for production
+//   ],
+//   credentials: true,
+// };
+const cors = require("cors");
+
 const corsOptions = {
-  origin: [
-    'http://localhost:5173', // for development
-    'https://hubspot-frontend.onrender.com' // for production
-  ],
+  origin: function (origin, callback) {
+    const allowedOrigins = [
+      "http://localhost:5173",
+      "https://hubspot-frontend.onrender.com"
+    ];
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
   credentials: true,
 };
 
