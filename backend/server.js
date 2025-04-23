@@ -12,7 +12,16 @@ const contactRoutes = require('./src/routes/contactRoutes');
 const app = express();
 
 // Middleware
-app.use(cors());
+// app.use(cors());
+const corsOptions = {
+  origin: [
+    'http://localhost:5173', // for development
+    'https://hubspot-frontend.onrender.com' // for production
+  ],
+  credentials: true,
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 
 // Routes
